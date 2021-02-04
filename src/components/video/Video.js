@@ -8,7 +8,15 @@ import Sidebar from "../Sidebar/Sidebar";
 // Imports for styling
 import "./Video.css";
 
-const Video = () => {
+const Video = ({
+  url,
+  channel,
+  description,
+  sound,
+  likes,
+  messages,
+  shares,
+}) => {
   // Managing local state
   const [playing, setPlaying] = useState(false);
 
@@ -33,10 +41,10 @@ const Video = () => {
         className="video__player"
         loop
         ref={videoRef}
-        src="https://www.w3schools.com/html/mov_bbb.mp4"
+        src={url}
       />
-      <Footer />
-      <Sidebar />
+      <Footer channel={channel} description={description} sound={sound} />
+      <Sidebar likes={likes} messages={messages} shares={shares} />
     </div>
   );
 };

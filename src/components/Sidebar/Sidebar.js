@@ -10,7 +10,7 @@ import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import MessageIcon from "@material-ui/icons/Message";
 import ShareIcon from "@material-ui/icons/Share";
 
-const Sidebar = () => {
+const Sidebar = ({likes, messages, shares}) => {
   const [like, setLike] = useState(false);
 
   return (
@@ -21,15 +21,15 @@ const Sidebar = () => {
         ) : (
           <FavoriteBorderIcon fontSize="large" onClick={() => setLike(true)} />
         )}
-        <p>{like ? 144 : 143}</p>
+        <p>{like ? likes + 1 : likes}</p>
       </div>
       <div className="sidebar__button">
         <MessageIcon fontSize="large" />
-        <p>26</p>
+        <p>{messages}</p>
       </div>
       <div className="sidebar__button">
         <ShareIcon fontSize="large" />
-        <p>8</p>
+        <p>{shares}</p>
       </div>
     </div>
   );
