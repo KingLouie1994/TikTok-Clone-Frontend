@@ -15,8 +15,20 @@ const Footer = () => {
         <p>Here will be the description</p>
         <div className="footer__ticker">
           <MusicNoteIcon className="footer__icon" />
+          <Ticker mode="smooth">
+            {() => (
+              <>
+                <p>This is an example song</p>
+              </>
+            )}
+          </Ticker>
         </div>
       </div>
+      <img
+        className="footer__record"
+        src="https://static.thenounproject.com/png/934821-200.png"
+        alt="Song"
+      />
     </div>
   );
 };
