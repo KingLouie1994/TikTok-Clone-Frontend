@@ -1,7 +1,7 @@
-// Import of Components
+// Import of components
 import Video from "./components/video/Video";
 
-// Imports for Styling
+// Imports for styling
 import "./App.css";
 
 function App() {
