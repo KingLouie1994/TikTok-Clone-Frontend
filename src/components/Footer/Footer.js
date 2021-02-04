@@ -7,18 +7,18 @@ import "./Footer.css";
 // Imports from Material UI
 import MusicNoteIcon from "@material-ui/icons/MusicNote";
 
-const Footer = () => {
+const Footer = ({ channel, description, sound }) => {
   return (
     <div className="footer">
       <div className="footer__text">
-        <h3>@ChannelName</h3>
-        <p>Here will be the description</p>
+        <h3>@{channel}</h3>
+        <p>{description}</p>
         <div className="footer__ticker">
           <MusicNoteIcon className="footer__icon" />
           <Ticker mode="smooth">
             {() => (
               <>
-                <p>This is an example song</p>
+                <p>{sound}</p>
               </>
             )}
           </Ticker>
