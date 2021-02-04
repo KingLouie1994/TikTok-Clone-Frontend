@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 
 // Import of components
 import Footer from "../Footer/Footer";
+import Sidebar from "../Sidebar/Sidebar";
 
 // Imports for styling
 import "./Video.css";
@@ -35,6 +36,7 @@ const Video = () => {
         src="https://www.w3schools.com/html/mov_bbb.mp4"
       />
       <Footer />
+      <Sidebar />
     </div>
   );
 };
