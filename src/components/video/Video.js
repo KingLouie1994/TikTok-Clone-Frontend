@@ -1,6 +1,9 @@
 // Imports from react
 import { useState, useRef } from "react";
 
+// Import of components
+import Footer from "../Footer/Footer";
+
 // Imports for styling
 import "./Video.css";
 
@@ -31,6 +34,7 @@ const Video = () => {
         ref={videoRef}
         src="https://www.w3schools.com/html/mov_bbb.mp4"
       />
+      <Footer />
     </div>
   );
 };
